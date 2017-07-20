@@ -6,6 +6,7 @@ describe("Mocha and Chai", () => {
         expect(true).to.be.true;
     });
 });
+
 let converter = new RomanConverter();
 describe("Roman Numeral Converter ", () => {
     describe("Convert to Roman Numeral", () => {
@@ -19,6 +20,10 @@ describe("Roman Numeral Converter ", () => {
 
         it("Should return V when given 5", () => {
             expect(converter.convertArabicToRoman(5)).to.equals('V');
+        });
+
+        it("Should return IV when given 4", () => {
+            expect(converter.convertArabicToRoman(4)).to.equals('IV');
         });
     });
 });
