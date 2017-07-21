@@ -38,11 +38,15 @@ export default class RomanConverter{
             current = this.roman_numerals[roman.charAt(x)];
             arabic += current;
 
-            if(current > previous && previous > 0)
+            if(this.isSpecialCase(current, previous))
                 arabic -= (2 * previous);
 
             previous = current;
         }
         return arabic;
+    }
+
+    isSpecialCase(current, previous){
+        return current > previous > 0;
     }
 }
