@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register || exit 0"
+    "test": "mocha --watch --compilers js:babel-register || exit 0"
   },
   "keywords": [],
   "author": "",
