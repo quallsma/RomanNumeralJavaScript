@@ -1,12 +1,6 @@
 import { expect } from 'chai';
 import RomanConverter from '../index'
 
-describe("Mocha and Chai", () => {
-    it("should be working", () => {
-        expect(true).to.be.true;
-    });
-});
-
 const converter = new RomanConverter();
 describe("Roman Numeral Converter ", () => {
     describe("Convert to Roman Numeral", () => {
@@ -23,11 +17,11 @@ describe("Roman Numeral Converter ", () => {
         });
 
         it("Should return IV when given 4", () => {
-            expect(converter.convertArabicToRoman(1989)).to.equals('MCMLXXXIX');
+            expect(converter.convertArabicToRoman(4)).to.equals('IV');
         });
 
         it("Should return MCMLXXXIX when given 1989", () => {
-            expect(converter.convertArabicToRoman(4)).to.equals('IV');
+            expect(converter.convertArabicToRoman(1989)).to.equals('MCMLXXXIX');
         });
     });
 
